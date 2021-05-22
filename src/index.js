@@ -29,3 +29,9 @@ const container = document.querySelector('#chat');
 container.append(card);
 
 console.log('it works!');
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './components/App.js';
+
+ReactDOM.render(<App />, document.getElementById('chat'));
