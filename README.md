@@ -19,3 +19,9 @@ $ make install
 $ make start
 # open http://localhost:5000
 ```
+
+## Deploy
+```shell
+$ heroku login
+$ git push heroku main
+```

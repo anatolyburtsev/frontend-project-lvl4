@@ -2,8 +2,6 @@
 
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 
 const mode = process.env.NODE_ENV || 'development';
 
@@ -12,10 +10,10 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
-  // output: {
-    // path: path.join(__dirname, 'dist', 'public'),
-    // publicPath: '/assets/'
-  // },
+  output: {
+    path: path.join(__dirname, 'dist', 'public'),
+    publicPath: '/assets/',
+  },
   devServer: {
     compress: true,
     port: 8080,
@@ -24,10 +22,7 @@ module.exports = {
     historyApiFallback: true,
   },
   plugins: [
-    new MiniCssExtractPlugin(),
-    new HtmlWebpackPlugin({
-      template: 'index.html',
-    }),
+    new MiniCssExtractPlugin()
   ],
   module: {
     rules: [
